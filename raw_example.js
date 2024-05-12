@@ -13,24 +13,29 @@ function createScriptElem(src) {
 }
 
 function importJS(src, node, debug) {
-    return new Promise((res)=>{
+    return new Promise((res, rej)=>{
         const elem = createScriptElem(src);
-        elem.onload = ()=>{res(src)}
+        elem.onload = ()=>{res(src)};
+        elem.onerror = ()=>{rej(src)}
         insertAfter(node, elem);
     }).then((src)=>{
         if (debug) {
             console.debug('script load: ', src);
         }
+    }).catch((src)=>{
+        console.warn('importing resource failed: %c%s', 
+            'font-style: italic;', 
+            src);
     })
 }
 
 function allIn(node) {
-    return Promise.all([
+    return Promise.allSettled([
         importJS('example/abcfn.js', node),
         importJS('example/temp.js', node),
         importJS('example/blue1911.js', node),
         importJS('example/blue1911code.js', node),
-        importJS('example/importOver.js', node),
+        importJS('example/importover.js', node),
     ]);
 }
 
