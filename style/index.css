@@ -2,5 +2,5 @@ code.wrap {
     display: block;
     border: 1px black dotted;
     padding: 2px;
-    margin-right: 61.8%;
+    max-width: 38.2rem;
 }
