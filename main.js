@@ -10,7 +10,7 @@ async function x() {
     //     v.splice(1,0,'display:block;float:left;width:3%;height:20rem;border:solid black 1px');
     //     return v;
     // });
-    ll([' vc\n\n\n\x1b[95C\n',_1911_BLUE_CODENAME,INFINITE_GREENYELLOW_BUBBLE_PADDING,'\x1b[95C\n\n\n\n'].join(''), tcssb, true, tsta, tconfd);
+    ll(['\n\n\n\x1b[95C\n',_1911_BLUE_CODENAME,INFINITE_GREENYELLOW_BUBBLE_PADDING,'\x1b[95C\n\n\n\n'].join(''), tcssb, true, tsta, tconfd);
 }
 // function copiability() {
 //     let copiableArr = document.querySelectorAll('.copiable');
