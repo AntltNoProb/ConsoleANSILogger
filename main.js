@@ -20,21 +20,22 @@ async function x() {
 //         }
 //     })
 // }
-console.info('%cHints:', '\
-padding:2px 1rem 0px;\
+console.log('%c\n%cHints:', '', '\
+padding:2px 1.1rem 1px;\
+border-top: solid 1px #edf7fc;\
+border-bottom: solid 1.2px #9696c0;\
+border-left: 0.7px dotted #d0e9f6;\
+border-right: 0.7px dotted #d0e9f6;\
 border-radius: 10% / 50%;\
-margin-bottom:-12px;\
 font-size: 1.05rem;\
 font-weight: bold;\
 color:#333;\
 text-shadow: 0 0 10px #fff,0 0 10px #fff,\
     0 0 10px #fff,0 0 10px #fff,0 0 10px #fff;\
-outline: solid 1px #2c628b, 1px dotted #000;\
-background: rgb(104,178,218);\
-background: linear-gradient(0deg, rgba(104,178,218,1) 0%, \
-    rgba(152,209,239,1) 49%, rgba(196,229,246,1) 49%, rgba(229,244,252,1) 100%); \
-box-shadow: inset 0 0 0 2px #86c6e8, \
-    inset 0 0 0 1px dotted #000;');
+background: \
+    linear-gradient(0deg, \
+        rgba(104,178,218,1) 0%, rgba(152,209,239,1) 49%, \
+        rgba(196,229,246,1) 49%, rgba(229,244,252,1) 92%, rgba(235,247,253,1) 100%); \
+');
 console.info('Maximize the console, paste the secret code and then press enter');
-console.info('把控制台窗口拉到最大，粘贴神秘代码并按下enter键');
-console.info()
+console.info('把控制台窗口最大化，粘贴神秘代码并按下enter键');
