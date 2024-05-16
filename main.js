@@ -3,8 +3,8 @@ async function x() {
     
     ll(INFINITE_GREENYELLOW_BUBBLE, tcssb, true, tsta, tconfd);
     ll(BOLLUX_BLUE_FONT, tcssb, true, tsta, tconf);
-    ll(IMG_24C_ANOHA, tcssb, true, tsta, tconf)
     ll(_1911_BLUE_FONT, tcssb, true, tsta, tconf);
+    ll(IMG_24C_ANOHA, tcssb, true, tsta, tconf);
     // dl([' vc\n\n\n\x1b[95C\n',_1911_BLUE_CODENAME,INFINITE_GREENYELLOW_BUBBLE_PADDING,'\x1b[95C\n\n\n\n'].join(''), tcssb, true, tsta, tconfd, (arr)=>{
     //     const v = arr
     //     v[0] = v[0].replace('vc', '%c');
