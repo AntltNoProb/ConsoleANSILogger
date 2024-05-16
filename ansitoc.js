@@ -30,9 +30,21 @@ class PropStateManager {
             .map((k)=>PropStateManager.propConvert(k, prop[k]))
             .join('');
     }
+    static propDeepClone(props) {
+        // props should be Object
+        let rt = Object.assign({}, props);
+        for (const key in rt) {
+            if (Object.hasOwn(rt, key)
+                && typeof rt[key].onDeepClone == 'function') {
+                rt[key] = rt[key].onDeepClone(rt[key]);
+            }
+        }
+        return rt;
+    }
     updateAllProp(props) {
         if (props && props.constructor == Object) {
-            this.prop = Object.assign({}, props);
+            // this.prop = Object.assign({}, props);
+            this.prop = PropStateManager.propDeepClone(props);
             return true;
         }
         return false;
@@ -123,6 +135,11 @@ class ANSIConverter extends PropStateManager{
                 hideDefault: true,
                 prop: new Set(),
                 toStr: (p)=>(Array.from(p).join(' ')),
+                onDeepClone: (ob)=>{
+                    let rt = Object.assign({}, ob);
+                    rt.prop = new Set(rt.prop);
+                    return rt;
+                }
             },
         };
         this.DEFAULT_STATE = {
@@ -429,7 +446,7 @@ var tcss = {
     'white-space':'pre',
     'font-family':'"Cascadia Mono", "Segoe UI Mono", "Liberation Mono", \
 Menlo, Monaco, Consolas, monospace',
-    
+    'line-height':'1.21',
 }
 var tcssb = {...tcss, 'background':'black',}
 // var tcss={};
