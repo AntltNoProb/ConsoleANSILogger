@@ -35,6 +35,7 @@ function allIn(node) {
         importJS('example/temp.js', node),
         importJS('example/blue1911.js', node),
         importJS('example/blue1911code.js', node),
+        importJS('example/anoha24.js', node),
         importJS('example/importover.js', node),
     ]);
 }
